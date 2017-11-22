@@ -12,5 +12,15 @@ cache:
     - ".eslintcache"
     - "node_modules"
 
+notifications:
+  email: false
+
 script:
   - yarn run test:ci
+
+after_success:
+  - npm run semantic-release
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

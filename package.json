@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-console-with-loc",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "babel plugin for console.log with loc",
   "license": "MIT",
   "repository": "akameco/babel-plugin-console-with-loc",
@@ -22,7 +22,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage --ci --runInBand",
     "test:ci": "npm run validate",
-    "validate": "npm run lint && npm run flow && npm run test"
+    "validate": "npm run lint && npm run flow && npm run test",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "lint-staged": {
     "*.js": ["fmt", "validate", "git add"],
@@ -43,7 +45,8 @@
     "husky": "^0.14.3",
     "jest": "^21.2.1",
     "lint-staged": "^5.0.0",
-    "prettier": "^1.8.2"
+    "prettier": "^1.8.2",
+    "semantic-release": "^8.2.0"
   },
   "dependencies": {
     "babel-looks-like": "^0.1.0"
