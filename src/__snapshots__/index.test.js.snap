@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`no console.log 1`] = `
+"
+log('hello world')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+log('hello world');
+"
+`;
+
+exports[`single console.log 1`] = `
+"
+console.log('hello world')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+console.log('{\\"start\\":{\\"line\\":1,\\"column\\":0},\\"end\\":{\\"line\\":1,\\"column\\":26}}', 'hello world');
+"
+`;
